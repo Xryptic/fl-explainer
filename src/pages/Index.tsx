@@ -43,7 +43,7 @@ const Index = () => {
             <Button asChild size="lg" className="gap-2">
               <Link to="/simulation">
                 <FlaskConical className="w-4 h-4" />
-                FL Simulation Laboratory
+                Try FL Simulation Laboratory
               </Link>
             </Button>
           </motion.div>
