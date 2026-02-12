@@ -260,7 +260,7 @@ const Index = () => {
           <p className="text-center text-sm text-muted-foreground">
             A fork from 'ShenKai/fl-tech-explainer'
           </p>
-          <p>
+          <p className="text-center text-sm text-muted-foreground">
             Copyright© xryptic.com
           </p>
         </div>
