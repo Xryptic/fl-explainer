@@ -112,6 +112,29 @@ const Index = () => {
               </div>
               <OrchestraAnalogy type="horizontal" />
               <ExcelDataView type="horizontal" />
+
+              {/* Section Divider — Training Scenario */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mt-8 mb-6"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-primary/70">How It Works</span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                </div>
+                <h3 className="text-lg font-bold text-center mb-2">
+                  🏥 Scenario: Three Hospitals Training a Shared Diagnosis Model
+                </h3>
+                <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
+                  Three hospitals each hold medical records for <strong className="text-foreground">different patients</strong> but collect the <strong className="text-foreground">same health metrics</strong>. 
+                  They want to collaboratively train a disease prediction model — without ever sharing patient data. 
+                  Follow the steps below to see how Horizontal FL makes this possible.
+                </p>
+              </motion.div>
+
               <HorizontalFLDemo />
             </motion.div>
           </TabsContent>
@@ -140,6 +163,29 @@ const Index = () => {
               </div>
               <OrchestraAnalogy type="vertical" />
               <ExcelDataView type="vertical" />
+
+              {/* Section Divider — Training Scenario */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mt-8 mb-6"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-accent/70">How It Works</span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+                </div>
+                <h3 className="text-lg font-bold text-center mb-2">
+                  🏦 Scenario: A Bank &amp; Retailer Building a Credit Score Model
+                </h3>
+                <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
+                  A bank holds <strong className="text-foreground">financial records</strong> and a retailer holds <strong className="text-foreground">purchase history</strong> — for the <strong className="text-foreground">same customers</strong>. 
+                  Together they want to predict creditworthiness without revealing their proprietary data to each other. 
+                  Follow the steps below to see how Vertical FL enables this cross-industry collaboration.
+                </p>
+              </motion.div>
+
               <VerticalFLDemo />
             </motion.div>
           </TabsContent>
