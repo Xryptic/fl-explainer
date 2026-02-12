@@ -257,6 +257,9 @@ const Index = () => {
           <p className="text-center text-sm text-muted-foreground">
             Interactive Federated Demo App • Built for educational purposes
           </p>
+          <p className="text-center text-sm text-muted-foreground">
+            A fork from 'ShenKai/fl-tech-explainer'
+          </p>
           <p>
             Copyright© xryptic.com
           </p>
