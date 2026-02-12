@@ -31,7 +31,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Interactive Demo
+              Interactive PETs Demo
             </motion.div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="gradient-text">Federated Learning</span>
@@ -255,7 +255,10 @@ const Index = () => {
       <footer className="border-t border-border/50 mt-12">
         <div className="container mx-auto px-4 py-6">
           <p className="text-center text-sm text-muted-foreground">
-            Interactive Federated Learning Demo • Built for educational purposes
+            Interactive Federated Demo App • Built for educational purposes
+          </p>
+          <p>
+            Copyright© xryptic.com
           </p>
         </div>
       </footer>
