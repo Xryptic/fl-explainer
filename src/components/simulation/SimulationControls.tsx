@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Play, Square, RotateCcw, HelpCircle } from "lucide-react";
 import type { FLMode, HyperParams, ClientConfig } from "@/hooks/useSimulationEngine";
+import { StepperInput } from "@/components/simulation/StepperInput";
 
 interface SimulationControlsProps {
   mode: FLMode;
@@ -139,51 +140,37 @@ export function SimulationControls({
       {/* Hyperparameters */}
       <div className="space-y-3">
         <Label className="text-sm font-semibold">Hyperparameters</Label>
-        <div className="grid grid-cols-3 gap-2">
-          <div>
-            <label className="text-xs text-muted-foreground block mb-1">Learning Rate</label>
-            <Input
-              type="number"
-              step="0.001"
-              min="0.001"
-              max="1"
-              value={hyperParams.learningRate}
-              onChange={(e) =>
-                setHyperParams({ ...hyperParams, learningRate: parseFloat(e.target.value) || 0.01 })
-              }
-              disabled={isRunning}
-              className="h-8 text-xs font-mono"
-            />
-          </div>
-          <div>
-            <label className="text-xs text-muted-foreground block mb-1">Local Epochs</label>
-            <Input
-              type="number"
-              min={1}
-              max={20}
-              value={hyperParams.localEpochs}
-              onChange={(e) =>
-                setHyperParams({ ...hyperParams, localEpochs: parseInt(e.target.value) || 3 })
-              }
-              disabled={isRunning}
-              className="h-8 text-xs font-mono"
-            />
-          </div>
-          <div>
-            <label className="text-xs text-muted-foreground block mb-1">Batch Size</label>
-            <Input
-              type="number"
-              min={8}
-              max={256}
-              step={8}
-              value={hyperParams.batchSize}
-              onChange={(e) =>
-                setHyperParams({ ...hyperParams, batchSize: parseInt(e.target.value) || 32 })
-              }
-              disabled={isRunning}
-              className="h-8 text-xs font-mono"
-            />
-          </div>
+      <div className="space-y-3">
+          <StepperInput
+            label="Learning Rate"
+            value={hyperParams.learningRate}
+            step={0.005}
+            min={0.001}
+            max={1}
+            decimals={3}
+            onChange={(v) => setHyperParams({ ...hyperParams, learningRate: v })}
+            disabled={isRunning}
+          />
+          <StepperInput
+            label="Local Epochs"
+            value={hyperParams.localEpochs}
+            step={1}
+            min={1}
+            max={20}
+            decimals={0}
+            onChange={(v) => setHyperParams({ ...hyperParams, localEpochs: v })}
+            disabled={isRunning}
+          />
+          <StepperInput
+            label="Batch Size"
+            value={hyperParams.batchSize}
+            step={8}
+            min={8}
+            max={256}
+            decimals={0}
+            onChange={(v) => setHyperParams({ ...hyperParams, batchSize: v })}
+            disabled={isRunning}
+          />
         </div>
       </div>
 
