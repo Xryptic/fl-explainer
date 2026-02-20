@@ -45,7 +45,7 @@ const SimulationLab = () => {
               <span className="text-foreground">Laboratory</span>
             </h1>
             <p className="text-sm text-muted-foreground max-w-lg mx-auto">
-              Training on the <strong>{DATASET_INFO.name}</strong> dataset
+              Training simulation demo on the <strong>{DATASET_INFO.name}</strong> dataset
               ({DATASET_INFO.trainSamples.toLocaleString()} train / {DATASET_INFO.testSamples.toLocaleString()} test samples, {DATASET_INFO.numFeatures} features).
               Flower-style FedAvg aggregation with live metrics.
             </p>
